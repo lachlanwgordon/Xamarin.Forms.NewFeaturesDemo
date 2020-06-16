@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Xamarin.Forms.Controls.NewControls.Pages.DemoPage"
+    xmlns:tabView="clr-namespace:Xamarin.Forms.TabView;assembly=Xamarin.Forms.TabView"
+    xmlns:appBar="clr-namespace:Xamarin.Forms;assembly=Xamarin.Forms.AppBar">
+    <ContentPage.Content>
+        <Grid
+            RowDefinitions="Auto, *"
+            x:Name="TheStack">
+          
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition
+                    Width="*" />
+            </Grid.ColumnDefinitions>
+            <appBar:AppBar
+                >
+                <appBar:AppBar.Background>
+                    <LinearGradientBrush
+                                StartPoint="0, 0"
+                                EndPoint="1, 0">
+                                <LinearGradientBrush.GradientStops>
+                                    <GradientStop
+                                        Color="#8A2387"
+                                        Offset="0.1" />
+                                    <GradientStop
+                                        Color="#E94057"
+                                        Offset="0.6" />
+                                    <GradientStop
+                                        Color="#F27121"
+                                        Offset="1.0" />
+                                </LinearGradientBrush.GradientStops>
+                            </LinearGradientBrush>
+                </appBar:AppBar.Background>
+            </appBar:AppBar>
+            <tabView:TabView
+                Grid.Row="1"
+                TabStripPlacement="Bottom"
+                TabStripBackgroundColor="Blue"
+                TabStripHeight="60"
+                TabIndicatorColor="Yellow"
+                TabContentBackgroundColor="Yellow">
+                <tabView:TabViewItem
+                    Icon="triangle.png"
+                    Text="Tab 1"
+                    TextColor="White"
+                    TextColorSelected="Yellow"
+                    FontSize="12">
+                    <Grid>
+                        <Grid.Background>
+                            <LinearGradientBrush
+                                StartPoint="0, 0"
+                                EndPoint="1, 0">
+                                <LinearGradientBrush.GradientStops>
+                                    <GradientStop
+                                        Color="#8A2387"
+                                        Offset="0.1" />
+                                    <GradientStop
+                                        Color="#E94057"
+                                        Offset="0.6" />
+                                    <GradientStop
+                                        Color="#F27121"
+                                        Offset="1.0" />
+                                </LinearGradientBrush.GradientStops>
+                            </LinearGradientBrush>
+                        </Grid.Background>
+                        <Ellipse
+                            Fill="Red"
+                            WidthRequest="150"
+                            HeightRequest="50" />
+                        <Label
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Text="TabContent1" />
+                    </Grid>
+                </tabView:TabViewItem>
+                <tabView:TabViewItem
+                    Icon="circle.png"
+                    Text="Tab 2"
+                    TextColor="White"
+                    TextColorSelected="Yellow"
+                    FontSize="12">
+                    <Grid>
+                        <Label
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Text="TabContent2" />
+                    </Grid>
+                </tabView:TabViewItem>
+            </tabView:TabView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

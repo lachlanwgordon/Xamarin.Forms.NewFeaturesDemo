@@ -88,6 +88,8 @@
   <ItemGroup>
     <Folder Include="Fonts\" />
     <Folder Include="GalleryPages\AppThemeGalleries\" />
+    <Folder Include="NewControls\" />
+    <Folder Include="NewControls\Pages\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -117,6 +119,10 @@
     <Compile Update="GalleryPages\AppThemeGalleries\OSThemesGallery.cs">
       <SubType></SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Xamarin.Forms.AppBar\Xamarin.Forms.AppBar.csproj" />
+    <ProjectReference Include="..\Xamarin.Forms.TabView\Xamarin.Forms.TabView.csproj" />
   </ItemGroup>
   <Target Name="CreateControllGalleryConfig" BeforeTargets="Build">
     <CreateItem Include="blank.config">

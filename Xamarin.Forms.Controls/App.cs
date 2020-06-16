@@ -6,6 +6,7 @@ using System.IO;
 using System.Reflection;
 using System.Threading.Tasks;
 using Xamarin.Forms.Controls.Issues;
+using Xamarin.Forms.Controls.NewControls.Pages;
 using Xamarin.Forms.Internals;
 using Xamarin.Forms.PlatformConfiguration;
 using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
@@ -34,7 +35,9 @@ namespace Xamarin.Forms.Controls
 		{
 			_testCloudService = DependencyService.Get<ITestCloudService>();
 
-			SetMainPage(CreateDefaultMainPage());
+			//SetMainPage(CreateDefaultMainPage());
+			Device.SetFlags(new[] { ExperimentalFlags.BrushExperimental, ExperimentalFlags.SwipeViewExperimental, ExperimentalFlags.ShapesExperimental });
+			MainPage = new DemoPage();
 
 			//TestMainPageSwitches();
 
